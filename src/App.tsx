@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProjectDetail from "./component/layouts/ProjectDetail";
+import ProjectDetail from "./pages/ProjectDetail";
 import HomePage from "./pages/HomePage";
-import MyResume from "./component/fragments/Home/MyResume";
+import MyResume from "./pages/MyResume";
 
 function App() {
   return (
