@@ -1,0 +1,55 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Hanya untuk branch main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout kode dari repositori
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Setup Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Gunakan versi Node.js yang sesuai dengan proyekmu
+
+      # Install dependencies menggunakan npm
+      - name: Install dependencies
+        run: npm install
+
+      # Menjalankan test dengan Jest
+      - name: Run tests
+        run: npm test -- --ci --coverage
+
+      # Build Docker image
+      - name: Build Docker image
+        run: |
+          docker build -t my-docker-image .
+          docker tag my-docker-image myusername/my-docker-image:latest
+
+      # Push Docker image ke Docker Hub
+      - name: Push Docker image to Docker Hub
+        run: |
+          echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin
+          docker push myusername/my-docker-image:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Menunggu job build selesai sebelum deploy
+    steps:
+      # Checkout kode dari repositori
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Deploy ke server atau cloud service
+      - name: Deploy to server
+        run: |
+          # Ganti dengan perintah deploy yang sesuai dengan aplikasi atau servermu
+          echo "Deploying app..."
