@@ -9,7 +9,7 @@ interface SkillCardListProps {
 }
 
 const SkillCardList: React.FC<SkillCardListProps> = ({ cards, activeCard, handleCardClick }) => {
-    console.log(cards); 
+    
   return (
     <div 
       className="card-container flex flex-wrap gap-8 justify-center items-center mt-12 px-4"
