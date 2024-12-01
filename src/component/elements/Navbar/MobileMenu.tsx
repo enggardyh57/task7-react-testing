@@ -1,3 +1,4 @@
+import React from "react";
 import NavbarItem from "./NavbarItem";
 
 interface MobileMenuProps {
@@ -24,7 +25,6 @@ const MobileMenu = ({ isMenuOpen, activeLink, handleSetActive }: MobileMenuProps
         block: "start",
       });
 
-     
       window.history.pushState({}, "", `#${sectionId}`);
     }
   };
@@ -39,7 +39,7 @@ const MobileMenu = ({ isMenuOpen, activeLink, handleSetActive }: MobileMenuProps
           sectionId={sectionId}
           onClick={() => {
             handleSetActive(link);
-            handleScrollToSection(sectionId); 
+            handleScrollToSection(sectionId);
           }}
         />
       ))}

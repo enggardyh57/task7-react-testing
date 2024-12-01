@@ -1,3 +1,4 @@
+import React from "react";
 import SkillCard from "../../elements/Skill/SkillCard";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -8,10 +9,21 @@ interface SkillCardListProps {
 }
 
 const SkillCardList: React.FC<SkillCardListProps> = ({ cards, activeCard, handleCardClick }) => {
+    console.log(cards); 
   return (
-    <div className="card-container flex flex-wrap gap-8 justify-center items-center mt-12 px-4">
+    <div 
+      className="card-container flex flex-wrap gap-8 justify-center items-center mt-12 px-4"
+      data-testid="skill-card-list"  
+    >
       {cards.map((card, index) => (
-        <SkillCard key={index} icon={card.icon} title={card.title} isActive={activeCard === index} onClick={() => handleCardClick(index)} />
+        <SkillCard
+          key={index}
+          icon={card.icon}
+          title={card.title}
+          isActive={activeCard === index}
+          onClick={() => handleCardClick(index)}
+          data-testid={`skill-card-${index}`}  
+        />
       ))}
     </div>
   );

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import SkillCardList from "../fragments/Skill/SkillCardList";
 import SkillList from "../fragments/Skill/SkillList";
@@ -31,19 +32,23 @@ const Skill = () => {
   };
 
   return (
-    <div className="skill section bg-primary py-20" id="skills">
-      <div className="text-center max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Skills</h2>
-        <h3 className="text-xl sm:text-xl md:text-2xl mb-4 opacity-70">What I Do</h3>
-        <p className="text-base sm:text-lg md:text-lg leading-relaxed">
+    <div className="skill section bg-primary py-20" id="skills" data-testid="skill-section">
+      <div className="text-center max-w-3xl mx-auto px-4" data-testid="skill-heading">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" data-testid="skill-title">
+          Skills
+        </h2>
+        <h3 className="text-xl sm:text-xl md:text-2xl mb-4 opacity-70" data-testid="skill-subtitle">
+          What I Do
+        </h3>
+        <p className="text-base sm:text-lg md:text-lg leading-relaxed" data-testid="skill-description">
           I am passionate about creating engaging and user-friendly experiences through effective UI/UX design. I have a strong foundation in web development, with expertise in HTML, CSS, JavaScript, and React.
         </p>
       </div>
 
-      <SkillCardList cards={cards} activeCard={activeCard} handleCardClick={handleCardClick} />
+      <SkillCardList cards={cards} activeCard={activeCard} handleCardClick={handleCardClick} data-testid="skill-card-list" />
 
       <div className="my-8">
-        <div className="text-center max-w-3xl mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto px-4" data-testid="why-choose-me">
           <h3 className="text-xl sm:text-xl md:text-2xl mb-4 opacity-70">Why Choose Me</h3>
           <p className="text-base sm:text-lg md:text-lg leading-relaxed">
             I combine simplicity and functionality to create designs and solutions that are not only beautiful but also effective. By focusing on efficiency and clarity, I ensure that your ideas come to life seamlessly and successfully.
@@ -51,7 +56,7 @@ const Skill = () => {
         </div>
       </div>
 
-      <SkillList skills={skills} getSkillColor={getSkillColor} />
+      <SkillList skills={skills} getSkillColor={getSkillColor} data-testid="skill-list" />
     </div>
   );
 };

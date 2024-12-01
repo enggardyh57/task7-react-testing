@@ -1,3 +1,4 @@
+import React from "react";
 import SkillRow from "../../elements/Skill/SkillRow";
 
 interface Skill {

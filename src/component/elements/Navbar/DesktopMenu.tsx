@@ -1,25 +1,19 @@
+import React from "react";
 interface DesktopMenuProps {
   activeLink: string;
   handleSetActive: (link: string) => void;
 }
 
 const DesktopMenu = ({ activeLink, handleSetActive }: DesktopMenuProps) => {
-
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-     
       section.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
 
-     
-      window.history.pushState(
-        {}, 
-        "", 
-        `#${sectionId}`
-      );
+      window.history.pushState({}, "", `#${sectionId}`);
     }
   };
 
@@ -36,7 +30,7 @@ const DesktopMenu = ({ activeLink, handleSetActive }: DesktopMenuProps) => {
         <li
           key={link}
           onClick={(e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             handleSetActive(link);
             handleScrollToSection(sectionId);
           }}

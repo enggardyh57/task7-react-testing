@@ -1,16 +1,16 @@
+import React from "react";
 interface NavbarItemProps {
   link: string;
-  activeLink: string; 
+  activeLink: string;
   sectionId: string;
-  onClick: () => void; 
+  onClick: () => void;
 }
 
 const NavbarItem = ({ link, activeLink, sectionId, onClick }: NavbarItemProps) => {
- 
   const handleScrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId); 
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" }); 
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -18,12 +18,12 @@ const NavbarItem = ({ link, activeLink, sectionId, onClick }: NavbarItemProps) =
     <li
       onClick={(e) => {
         e.preventDefault();
-        onClick(); 
-        handleScrollToSection(sectionId); 
+        onClick();
+        handleScrollToSection(sectionId);
       }}
       className={`cursor-pointer ${activeLink === link ? "text-black font-bold" : ""}`}
     >
-      <a href={`#${sectionId}`}>{link}</a> 
+      <a href={`#${sectionId}`}>{link}</a>
     </li>
   );
 };

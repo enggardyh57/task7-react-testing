@@ -1,3 +1,4 @@
+import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-seccondary text-primary font-bold text-xl py-8 ">

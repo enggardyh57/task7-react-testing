@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import NavbarOrganism from "../fragments/Navbar/NavbarAppend";
 
@@ -7,7 +8,7 @@ const NavbarPage = () => {
 
   const handleSetActive = (link: string): void => {
     setActiveLink(link);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
