@@ -43,11 +43,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Login to Docker Hub (manual)
+        run: |
+          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v3
@@ -55,5 +53,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-testing:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-testing:${{ github.sha }}
