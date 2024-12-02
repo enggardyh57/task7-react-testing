@@ -2,9 +2,9 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Button, { ButtonProps } from "../component/elements/Home/Button";
-import "@testing-library/jest-dom"; // Impor untuk matcher tambahan
+import "@testing-library/jest-dom"; // Import for additional matchers
 
-// Fungsi bantu untuk merender komponen Button dengan provider yang diperlukan
+// Helper function to render the Button component with required providers
 const renderButton = (props: ButtonProps) => {
   render(
     <BrowserRouter
@@ -18,32 +18,32 @@ const renderButton = (props: ButtonProps) => {
   );
 };
 
-describe("Komponen Button", () => {
-  it("merender tombol dengan teks yang benar", () => {
-    renderButton({ text: "Klik saya" });
+describe("Button Component", () => {
+  it("renders the button with the correct text", () => {
+    renderButton({ text: "Click me" });
 
     const button = screen.getByRole("button");
-    expect(button).toHaveTextContent("Klik saya");
+    expect(button).toHaveTextContent("Click me");
   });
 
-  it("merender Link ketika prop `to` diberikan", () => {
-    renderButton({ to: "/test-url", text: "Ke Test" });
+  it("renders Link when `to` prop is provided", () => {
+    renderButton({ to: "/test-url", text: "Go to Test" });
 
     const link = screen.getByRole("link");
     expect(link).toBeInTheDocument();
   });
 
-  it("merender anchor dengan `href` ketika prop `href` diberikan", () => {
-    renderButton({ href: "https://example.com", text: "Kunjungi Example" });
+  it("renders anchor with `href` when `href` prop is provided", () => {
+    renderButton({ href: "https://example.com", text: "Visit Example" });
 
     const anchor = screen.getByRole("link");
     expect(anchor).toHaveAttribute("href", "https://example.com");
   });
 
-  it("tidak merender Link ketika prop `href` diberikan", () => {
-    renderButton({ href: "https://example.com", text: "Kunjungi Example" });
+  it("does not render Link when `href` prop is provided", () => {
+    renderButton({ href: "https://example.com", text: "Visit Example" });
 
-    const link = screen.queryByRole("link", { name: "Ke Test" });
+    const link = screen.queryByRole("link", { name: "Go to Test" });
     expect(link).not.toBeInTheDocument();
   });
 });

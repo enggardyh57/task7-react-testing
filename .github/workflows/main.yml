@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Gunakan Node.js
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18.x"
@@ -26,14 +26,14 @@ jobs:
         run: |
           npm ci
 
-      - name: Jalankan Uji Komponen
+      - name: Run Component Test
         run: |
           npm test
 
   build-and-push:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'  # Pastikan job ini hanya berjalan untuk branch main
+    if: github.ref == 'refs/heads/main' 
 
     steps:
       - uses: actions/checkout@v3
@@ -41,18 +41,18 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Login ke Docker Hub dengan debug
+      - name: Login to Docker Hub with debug
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
         env:
-          DOCKER_CLI_EXPERIMENTAL: enabled  # Mengaktifkan debugging
+          DOCKER_CLI_EXPERIMENTAL: enabled  
 
       - name: Build dan Push Docker Image
         uses: docker/build-push-action@v3
         with:
-          context: .  # Menunjukkan lokasi konteks build
+          context: . 
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/portfolio-testing:latest
