@@ -13,4 +13,4 @@ Hasil Test Jest:
 ![Test Jest](img/test.png)
 
 Push Docker :
-![Test Jest](imgg/docker.png)
+![Test Jest](img/docker.png)
