@@ -52,8 +52,8 @@ jobs:
       - name: Build dan Push Docker Image
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: .  # Menunjukkan lokasi konteks build
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/portfolio:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/portfolio-testing:latest
+            ${{ secrets.DOCKER_USERNAME }}/portfolio-testing:${{ github.sha }}
