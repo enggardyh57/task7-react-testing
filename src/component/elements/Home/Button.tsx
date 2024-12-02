@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface ButtonProps {
+export interface ButtonProps {
   href?: string; 
   to?: string; 
   text: string;

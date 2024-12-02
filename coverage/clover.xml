@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733116328689" clover="3.2.0">
+  <project timestamp="1733116328689" name="All files">
+    <metrics statements="84" coveredstatements="84" conditionals="15" coveredconditionals="11" methods="19" coveredmethods="19" elements="118" coveredelements="114" complexity="0" loc="84" ncloc="84" packages="6" files="14" classes="14"/>
+    <package name="elements.Contact">
+      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <file name="Button.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Contact\Button.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="Input.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Contact\Input.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="Label.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Contact\Label.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="TextArea.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Contact\TextArea.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="elements.Home">
+      <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Home\Button.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="elements.Skill">
+      <metrics statements="19" coveredstatements="19" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
+      <file name="Icon.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Skill\Icon.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="11" count="20" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="20" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="ProgressBar.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Skill\ProgressBar.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="SkillCard.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Skill\SkillCard.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="13" count="20" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="SkillRow.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\elements\Skill\SkillRow.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="fragments.Contact">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ContactForm.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\fragments\Contact\ContactForm.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="fragments.Skill">
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="SkillCardList.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\fragments\Skill\SkillCardList.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="18" count="20" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="SkillList.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\fragments\Skill\SkillList.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="20" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="layouts">
+      <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <file name="Footer.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\layouts\Footer.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="Skill.tsx" path="D:\Dokumen\MSIB_Productzilla\materi\wekk10\task6-reactJS-PortofolioTest\src\component\layouts\Skill.tsx">
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="20" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="20" type="cond" truecount="0" falsecount="1"/>
+        <line num="31" count="20" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
